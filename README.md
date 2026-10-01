@@ -30,7 +30,6 @@ class AthallahRafif:
 * 🔬 **Medical AI Research**: Developed a Generative AI pipeline utilizing **StyleGAN2-ADA** and **StyleGAN3** to solve medical data scarcity, boosting CNN **DenseNet121** classification accuracy to **91.2%** (+8.7% improvement, FID: 59.49).
 * 🌾 **Kaggle Competitor**: Architected an autonomous multi-agent simulation agent for the **Kaggriculture $50,000 Challenge** (featuring dynamic economy ROI models, BFS grid pathfinding, and turn planners).
 * 🤖 **RAG & NLP Practitioner**: Built production-oriented Retrieval-Augmented Generation (RAG) conversational agents and data pipelines with Streamlit & PyTorch.
-* 🎮 **Competitive Esports Athlete**: Competed as an official provincial Esports athlete representing **OKU Regency (Ogan Komering Ulu)** at **Porprov Sumatera Selatan**, demonstrating high-stakes strategic execution, rapid decision-making, and disciplined team coordination.
 
 ---
 
