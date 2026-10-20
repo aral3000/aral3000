@@ -8,18 +8,17 @@
 </p>
 
 ```python
-class AthallahRafif:
-    def __init__(self):
-        self.name = "M. Athallah Rafif Aldera, S.Kom."
-        self.role = "AI & Machine Learning Engineer"
-        self.education = "Bachelor of Computer Systems, Universitas Sriwijaya (UNSRI)"
-        self.focus_areas = [
-            "Deep Learning & Computer Vision (CNN, GANs, XAI)",
-            "Machine Learning Systems & Applied Cybersecurity",
-            "Autonomous Agents & Tool Calling (LLMs, Function Execution)",
-            "Production RAG & Vector Databases (FastAPI, Docker)",
-        ]
-        self.current_mission = "Building verified, production-grade AI systems that solve real-world problems."
+aral@workstation:~$ neofetch --profile
+  /\_/\   (o.o)   [M. Athallah Rafif Aldera, S.Kom.]
+ ( > < )  ( _ )   AI & Machine Learning Engineer
+───────────────────────────────────────────────────────────────────
+▸ Degree       : B.S. in Computer Systems, Sriwijaya University (UNSRI)
+▸ Focus        : Computer Vision, Generative AI (GANs) & Agentic LLMs
+▸ Flagship     : StyleGAN2-ADA (FID 49.62) & DenseNet121 (Acc 95.00%)
+▸ Defense ML   : Phishing URL Guard on 630K URLs (Acc 89.0%, KOMINFO)
+▸ Stack        : Python 3, PyTorch, TensorFlow, Scikit-Learn, FastAPI, SQL
+▸ Availability : Open for AI Engineer Roles (Jakarta / Hybrid / Remote)
+───────────────────────────────────────────────────────────────────
 ```
 
 ---
