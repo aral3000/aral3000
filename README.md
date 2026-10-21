@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://aral3000.github.io"><img src="https://img.shields.io/badge/Portfolio-Live%20Website-red?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/></a>
   <a href="https://linkedin.com/in/mathallahrafifaldera"><img src="https://img.shields.io/badge/LinkedIn-Athallah%20Rafif-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="[https://www.credly.com/badges/88fa31ad-35ee-4d9d-88bf-785b93c87edb/public_url](https://www.credly.com/users/m-athallah-rafif-aldera/badges/credly)"><img src="https://img.shields.io/badge/Google%20Cloud-Certified%20Contender-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"/></a>
+  <a href="https://www.credly.com/users/m-athallah-rafif-aldera/badges/credly"><img src="https://img.shields.io/badge/Google%20Cloud-Certified%20Contender-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"/></a>
   <a href="mailto:mathallahrafifaldera@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
