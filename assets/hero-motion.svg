@@ -2,19 +2,24 @@
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0A0A0F"/>
-      <stop offset="50%" stop-color="#14080B"/>
+      <stop offset="50%" stop-color="#160709"/>
       <stop offset="100%" stop-color="#0A0A0F"/>
     </linearGradient>
 
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#F5D061"/>
+      <stop offset="0%" stop-color="#FFE07D"/>
       <stop offset="50%" stop-color="#D4AF37"/>
-      <stop offset="100%" stop-color="#AA7C11"/>
+      <stop offset="100%" stop-color="#9A740F"/>
     </linearGradient>
 
     <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#8B0000"/>
-      <stop offset="100%" stop-color="#E63946"/>
+      <stop offset="100%" stop-color="#FF4D5A"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#90E0EF"/>
     </linearGradient>
 
     <linearGradient id="scanLine" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -29,29 +34,19 @@
     </filter>
 
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#D4AF37" stroke-width="0.4" stroke-opacity="0.08"/>
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#D4AF37" stroke-width="0.45" stroke-opacity="0.09"/>
     </pattern>
 
     <style>
-      .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #FFFFFF; letter-spacing: 1px; }
-      .gold-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: url(#goldGrad); }
+      .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.8px; }
+      .gold-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: url(#goldGrad); letter-spacing: 0.8px; }
       .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
       .sub { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; fill: #B8B8C8; font-size: 13px; }
-      .node-box { fill: #12121A; stroke: #D4AF37; stroke-width: 1.2; stroke-opacity: 0.55; }
-      .card-box { fill: #111119; stroke: #2A2A38; stroke-width: 1; }
-      .pulse-dot { animation: pulse 2s infinite ease-in-out; }
+      .node-box { fill: #12121A; stroke: #D4AF37; stroke-width: 1.2; stroke-opacity: 0.6; }
+      .card-box { fill: #101018; stroke: #D4AF37; stroke-width: 1; stroke-opacity: 0.35; }
       .flow-line { stroke-dasharray: 6 6; animation: dash 1.2s linear infinite; }
-      .bar-1 { animation: fillBar1 3.5s ease-out infinite alternate; }
-      .bar-2 { animation: fillBar2 3.5s ease-out infinite alternate; }
-      .bar-3 { animation: fillBar3 3.5s ease-out infinite alternate; }
-      .float-1 { animation: floatSlow 5s ease-in-out infinite; }
-      .float-2 { animation: floatSlow 6s ease-in-out infinite reverse; }
       .cursor { animation: blink 1s step-end infinite; }
 
-      @keyframes pulse {
-        0%, 100% { opacity: 1; r: 4.5px; }
-        50% { opacity: 0.35; r: 7px; }
-      }
       @keyframes dash {
         to { stroke-dashoffset: -24; }
       }
@@ -59,130 +54,125 @@
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
       }
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-      }
-      @keyframes fillBar1 {
-        0% { width: 120px; }
-        100% { width: 205px; }
-      }
-      @keyframes fillBar2 {
-        0% { width: 110px; }
-        100% { width: 188px; }
-      }
-      @keyframes fillBar3 {
-        0% { width: 130px; }
-        100% { width: 200px; }
-      }
     </style>
   </defs>
 
-  <!-- Background & Cyber Grid -->
-  <rect width="960" height="320" rx="16" fill="url(#bgGrad)" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.4"/>
-  <rect width="960" height="320" rx="16" fill="url(#grid)"/>
+  <!-- Outer Frame & Cyber Grid -->
+  <rect x="0" y="0" width="960" height="320" rx="16" fill="url(#bgGrad)" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="0" y="0" width="960" height="320" rx="16" fill="url(#grid)"/>
 
   <!-- Ambient Glow Orbs -->
-  <circle cx="140" cy="70" r="110" fill="#8B0000" opacity="0.18" filter="url(#glow)">
-    <animate attributeName="opacity" values="0.12;0.26;0.12" dur="4s" repeatCount="indefinite"/>
+  <circle cx="150" cy="85" r="115" fill="#8B0000" opacity="0.20" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.12;0.28;0.12" dur="4s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="820" cy="250" r="120" fill="#D4AF37" opacity="0.10" filter="url(#glow)">
+  <circle cx="800" cy="240" r="125" fill="#D4AF37" opacity="0.10" filter="url(#glow)">
     <animate attributeName="opacity" values="0.06;0.16;0.06" dur="5s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Animated Top Laser Scanner -->
-  <rect x="0" y="0" width="960" height="2.5" fill="url(#scanLine)">
-    <animate attributeName="y" values="6;312;6" dur="7s" repeatCount="indefinite"/>
+  <!-- Animated Top-to-Bottom Laser Scanner -->
+  <rect x="0" y="6" width="960" height="2" fill="url(#scanLine)">
+    <animate attributeName="y" values="8;310;8" dur="7s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Top Terminal Header Strip -->
-  <rect x="20" y="18" width="920" height="34" rx="8" fill="#151520" stroke="#2D2D3F" stroke-width="1"/>
-  <circle cx="40" cy="35" r="5.5" fill="#FF5F56"/>
-  <circle cx="58" cy="35" r="5.5" fill="#FFBD2E"/>
-  <circle cx="76" cy="35" r="5.5" fill="#27C93F"/>
-  <text x="100" y="39" class="mono" fill="#9A9AB0" font-size="12">aral@ai-workstation:~/telemetry$ ./run_inference_telemetry --realtime</text>
-  <rect x="572" y="28" width="7" height="14" fill="#D4AF37" class="cursor"/>
+  <!-- Top Terminal Header Strip (x=24..936, y=18..52) -->
+  <rect x="24" y="18" width="912" height="34" rx="8" fill="#14141F" stroke="#2D2D3F" stroke-width="1"/>
+  <circle cx="44" cy="35" r="5.5" fill="#FF5F56"/>
+  <circle cx="62" cy="35" r="5.5" fill="#FFBD2E"/>
+  <circle cx="80" cy="35" r="5.5" fill="#27C93F"/>
+  <text x="102" y="39" class="mono" fill="#A5A5BC" font-size="12">aral@ai-workstation:~/telemetry$ ./run_inference_telemetry --realtime</text>
+  <rect x="606" y="28" width="7" height="14" fill="#D4AF37" class="cursor"/>
 
   <!-- Live Status Pill (Top Right) -->
-  <rect x="738" y="23" width="190" height="24" rx="12" fill="#1C1417" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.7"/>
-  <circle cx="754" cy="35" r="4.5" fill="#2ECC71" class="pulse-dot"/>
-  <text x="767" y="39" class="mono" fill="#F5D061" font-size="11" font-weight="bold">OPEN FOR AI / DATA ROLES</text>
+  <rect x="730" y="23" width="196" height="24" rx="12" fill="#1C1417" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.75"/>
+  <circle cx="746" cy="35" r="4.5" fill="#2ECC71">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="759" y="39" class="mono" fill="#FFE07D" font-size="11" font-weight="bold">OPEN FOR AI / DATA ROLES</text>
 
-  <!-- LEFT COLUMN: Identity & Core Value Hook -->
-  <g transform="translate(28, 74)">
-    <text x="0" y="20" class="mono" fill="#E63946" font-size="12" font-weight="bold">▸ SYSTEM IDENTITY // S.Kom. (UNSRI '26 • GPA 3.77)</text>
-    <text x="0" y="52" class="title" font-size="25">M. ATHALLAH RAFIF</text>
-    <text x="262" y="52" class="gold-text" font-size="25">ALDERA</text>
-    <text x="0" y="78" class="mono" fill="#F5D061" font-size="14" font-weight="bold">AI Engineer • Machine Learning • Data Science</text>
-    <text x="0" y="102" class="sub">Building verified generative vision models, real-time ML security</text>
-    <text x="0" y="120" class="sub">guards, and autonomous tool-calling LLM pipelines.</text>
+  <!-- ====================================================================== -->
+  <!-- LEFT COLUMN: Identity, Headline & Animated Pipeline (x=28..500)        -->
+  <!-- ====================================================================== -->
+  <text x="28" y="88" class="mono" fill="#FF4D5A" font-size="12" font-weight="bold">▸ SYSTEM IDENTITY // S.Kom. (UNSRI '26 • GPA 3.77 / 4.00)</text>
+  <text x="28" y="122" class="title" font-size="24">M. ATHALLAH RAFIF</text>
+  <text x="282" y="122" class="gold-text" font-size="24">ALDERA</text>
+  <text x="28" y="148" class="mono" fill="#FFE07D" font-size="13.5" font-weight="bold">AI Engineer • Machine Learning • Data Science</text>
+  <text x="28" y="172" class="sub">Building verified generative vision models, real-time ML security</text>
+  <text x="28" y="190" class="sub">guards, and autonomous tool-calling LLM pipelines.</text>
 
-    <!-- Animated Architecture Pipeline Diagram -->
-    <g transform="translate(0, 140)" class="float-1">
-      <rect x="0" y="0" width="122" height="54" rx="8" class="node-box"/>
-      <text x="61" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">StyleGAN2-ADA</text>
-      <text x="61" y="40" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">FID: 49.62</text>
+  <!-- Animated Architecture Pipeline Nodes (y=214..274) -->
+  <!-- Node 1 -->
+  <rect x="28" y="214" width="128" height="58" rx="8" class="node-box"/>
+  <text x="92" y="238" text-anchor="middle" class="mono" fill="#FFE07D" font-size="11" font-weight="bold">StyleGAN2-ADA</text>
+  <text x="92" y="257" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">FID: 49.62</text>
 
-      <!-- Animated Connector 1 -->
-      <line x1="122" y1="27" x2="168" y2="27" stroke="#D4AF37" stroke-width="2" class="flow-line"/>
-      <circle cx="122" cy="27" r="3.5" fill="#F5D061" filter="url(#glow)">
-        <animate attributeName="cx" values="124;166" dur="1.2s" repeatCount="indefinite"/>
-      </circle>
+  <!-- Connector 1 (x=156..196) -->
+  <line x1="156" y1="243" x2="196" y2="243" stroke="#D4AF37" stroke-width="2" class="flow-line"/>
+  <circle cx="158" cy="243" r="3.5" fill="#FFE07D" filter="url(#glow)">
+    <animate attributeName="cx" values="158;194" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
 
-      <rect x="168" y="0" width="126" height="54" rx="8" class="node-box"/>
-      <text x="231" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">DenseNet121</text>
-      <text x="231" y="40" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">Acc: 97.00%</text>
+  <!-- Node 2 -->
+  <rect x="196" y="214" width="128" height="58" rx="8" class="node-box"/>
+  <text x="260" y="238" text-anchor="middle" class="mono" fill="#FFE07D" font-size="11" font-weight="bold">DenseNet121</text>
+  <text x="260" y="257" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">Acc: 97.00%</text>
 
-      <!-- Animated Connector 2 -->
-      <line x1="294" y1="27" x2="340" y2="27" stroke="#E63946" stroke-width="2" class="flow-line"/>
-      <circle cx="294" cy="27" r="3.5" fill="#E63946" filter="url(#glow)">
-        <animate attributeName="cx" values="296;338" dur="1.2s" repeatCount="indefinite"/>
-      </circle>
+  <!-- Connector 2 (x=324..364) -->
+  <line x1="324" y1="243" x2="364" y2="243" stroke="#FF4D5A" stroke-width="2" class="flow-line"/>
+  <circle cx="326" cy="243" r="3.5" fill="#FF4D5A" filter="url(#glow)">
+    <animate attributeName="cx" values="326;362" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
 
-      <rect x="340" y="0" width="132" height="54" rx="8" class="node-box"/>
-      <text x="406" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">FastAPI / Agent</text>
-      <text x="406" y="40" text-anchor="middle" class="mono" fill="#61DAFB" font-size="11">100% Pytest</text>
-    </g>
-  </g>
+  <!-- Node 3 -->
+  <rect x="364" y="214" width="132" height="58" rx="8" class="node-box"/>
+  <text x="430" y="238" text-anchor="middle" class="mono" fill="#FFE07D" font-size="11" font-weight="bold">FastAPI / Agent</text>
+  <text x="430" y="257" text-anchor="middle" class="mono" fill="#61DAFB" font-size="11">100% Pytest</text>
 
-  <!-- RIGHT COLUMN: Live Production Telemetry Bars -->
-  <g transform="translate(535, 70)" class="float-2">
-    <rect x="0" y="0" width="398" height="224" rx="12" class="card-box"/>
-    <text x="20" y="28" class="mono" fill="#F5D061" font-size="12" font-weight="bold">⚡ VERIFIED BENCHMARK TELEMETRY</text>
-    <line x1="20" y1="38" x2="378" y2="38" stroke="#2A2A38" stroke-width="1"/>
+  <!-- ====================================================================== -->
+  <!-- RIGHT COLUMN: Live Production Telemetry Card (x=520..936, y=68..296)   -->
+  <!-- ====================================================================== -->
+  <rect x="520" y="68" width="416" height="228" rx="12" class="card-box"/>
+  <text x="540" y="95" class="mono" fill="#FFE07D" font-size="12" font-weight="bold">⚡ VERIFIED BENCHMARK TELEMETRY</text>
+  <text x="916" y="95" text-anchor="end" class="mono" fill="#2ECC71" font-size="10.5">● LIVE METRICS</text>
+  <line x1="540" y1="106" x2="916" y2="106" stroke="#2A2A38" stroke-width="1"/>
 
-    <!-- Metric 1 -->
-    <text x="20" y="62" class="mono" fill="#E0E0E8" font-size="11.5">[01] Medical CNN Classification (DenseNet121)</text>
-    <text x="315" y="62" class="mono" fill="#2ECC71" font-size="11.5" font-weight="bold">97.00% ACC</text>
-    <rect x="20" y="70" width="220" height="8" rx="4" fill="#1E1E2C"/>
-    <rect x="20" y="70" width="205" height="8" rx="4" fill="url(#goldGrad)" class="bar-1"/>
-    <text x="250" y="78" class="mono" fill="#9A9AB0" font-size="10">100% Pos. Precision</text>
+  <!-- Metric 1: Medical CNN -->
+  <text x="540" y="128" class="mono" fill="#E8E8F0" font-size="11.5">[01] Medical CNN (DenseNet121 • VIA)</text>
+  <text x="916" y="128" text-anchor="end" class="mono" fill="#2ECC71" font-size="11.5" font-weight="bold">97.00% ACC</text>
+  <rect x="540" y="136" width="236" height="8" rx="4" fill="#1E1E2C"/>
+  <rect x="540" y="136" width="222" height="8" rx="4" fill="url(#goldGrad)">
+    <animate attributeName="width" values="165;226;165" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="916" y="144" text-anchor="end" class="mono" fill="#A0A0B8" font-size="10">100% Pos. Precision</text>
 
-    <!-- Metric 2 -->
-    <text x="20" y="108" class="mono" fill="#E0E0E8" font-size="11.5">[02] Phishing Guard ML (630,071 URLs • Kominfo)</text>
-    <text x="315" y="108" class="mono" fill="#F5D061" font-size="11.5" font-weight="bold">89.00% ACC</text>
-    <rect x="20" y="116" width="220" height="8" rx="4" fill="#1E1E2C"/>
-    <rect x="20" y="116" width="188" height="8" rx="4" fill="url(#crimsonGrad)" class="bar-2"/>
-    <text x="250" y="124" class="mono" fill="#9A9AB0" font-size="10">RandomForest + API</text>
+  <!-- Metric 2: Phishing Guard ML -->
+  <text x="540" y="174" class="mono" fill="#E8E8F0" font-size="11.5">[02] Phishing Guard ML (630K URLs)</text>
+  <text x="916" y="174" text-anchor="end" class="mono" fill="#FFE07D" font-size="11.5" font-weight="bold">89.00% ACC</text>
+  <rect x="540" y="182" width="236" height="8" rx="4" fill="#1E1E2C"/>
+  <rect x="540" y="182" width="204" height="8" rx="4" fill="url(#crimsonGrad)">
+    <animate attributeName="width" values="150;208;150" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="916" y="190" text-anchor="end" class="mono" fill="#A0A0B8" font-size="10">RandomForest + API</text>
 
-    <!-- Metric 3 -->
-    <text x="20" y="154" class="mono" fill="#E0E0E8" font-size="11.5">[03] ReAct Market Research Agent + Core Toolkit</text>
-    <text x="315" y="154" class="mono" fill="#61DAFB" font-size="11.5" font-weight="bold">PASS 100%</text>
-    <rect x="20" y="162" width="220" height="8" rx="4" fill="#1E1E2C"/>
-    <rect x="20" y="162" width="200" height="8" rx="4" fill="url(#goldGrad)" class="bar-3"/>
-    <text x="250" y="170" class="mono" fill="#9A9AB0" font-size="10">Vector DB + TDD</text>
+  <!-- Metric 3: ReAct Agent & Core Toolkit -->
+  <text x="540" y="220" class="mono" fill="#E8E8F0" font-size="11.5">[03] ReAct Agent &amp; AI Core Toolkit</text>
+  <text x="916" y="220" text-anchor="end" class="mono" fill="#90E0EF" font-size="11.5" font-weight="bold">PASS 100%</text>
+  <rect x="540" y="228" width="236" height="8" rx="4" fill="#1E1E2C"/>
+  <rect x="540" y="228" width="230" height="8" rx="4" fill="url(#cyanGrad)">
+    <animate attributeName="width" values="180;234;180" dur="3.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="916" y="236" text-anchor="end" class="mono" fill="#A0A0B8" font-size="10">Vector DB + Pytest</text>
 
-    <!-- Footer Stack Pills inside Card -->
-    <rect x="20" y="188" width="76" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
-    <text x="58" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">Python 3</text>
+  <!-- Stack Pills inside Right Card (y=256..280) -->
+  <rect x="540" y="256" width="84" height="24" rx="6" fill="#181824" stroke="#D4AF37" stroke-width="0.7"/>
+  <text x="582" y="272" text-anchor="middle" class="mono" fill="#FFE07D" font-size="10.5">Python 3</text>
 
-    <rect x="104" y="188" width="74" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
-    <text x="141" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">PyTorch</text>
+  <rect x="634" y="256" width="84" height="24" rx="6" fill="#181824" stroke="#D4AF37" stroke-width="0.7"/>
+  <text x="676" y="272" text-anchor="middle" class="mono" fill="#FFE07D" font-size="10.5">PyTorch</text>
 
-    <rect x="186" y="188" width="90" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
-    <text x="231" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">TensorFlow</text>
+  <rect x="728" y="256" width="90" height="24" rx="6" fill="#181824" stroke="#D4AF37" stroke-width="0.7"/>
+  <text x="773" y="272" text-anchor="middle" class="mono" fill="#FFE07D" font-size="10.5">TensorFlow</text>
 
-    <rect x="284" y="188" width="94" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
-    <text x="331" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">Scikit-Learn</text>
-  </g>
+  <rect x="828" y="256" width="88" height="24" rx="6" fill="#181824" stroke="#D4AF37" stroke-width="0.7"/>
+  <text x="872" y="272" text-anchor="middle" class="mono" fill="#FFE07D" font-size="10.5">FastAPI/SQL</text>
 </svg>
