@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0F"/>
+      <stop offset="50%" stop-color="#14080B"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5D061"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="100%" stop-color="#E63946"/>
+    </linearGradient>
+
+    <linearGradient id="scanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#D4AF37" stroke-width="0.4" stroke-opacity="0.08"/>
+    </pattern>
+
+    <style>
+      .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #FFFFFF; letter-spacing: 1px; }
+      .gold-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: url(#goldGrad); }
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+      .sub { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; fill: #B8B8C8; font-size: 13px; }
+      .node-box { fill: #12121A; stroke: #D4AF37; stroke-width: 1.2; stroke-opacity: 0.55; }
+      .card-box { fill: #111119; stroke: #2A2A38; stroke-width: 1; }
+      .pulse-dot { animation: pulse 2s infinite ease-in-out; }
+      .flow-line { stroke-dasharray: 6 6; animation: dash 1.2s linear infinite; }
+      .bar-1 { animation: fillBar1 3.5s ease-out infinite alternate; }
+      .bar-2 { animation: fillBar2 3.5s ease-out infinite alternate; }
+      .bar-3 { animation: fillBar3 3.5s ease-out infinite alternate; }
+      .float-1 { animation: floatSlow 5s ease-in-out infinite; }
+      .float-2 { animation: floatSlow 6s ease-in-out infinite reverse; }
+      .cursor { animation: blink 1s step-end infinite; }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; r: 4.5px; }
+        50% { opacity: 0.35; r: 7px; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -24; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes fillBar1 {
+        0% { width: 120px; }
+        100% { width: 205px; }
+      }
+      @keyframes fillBar2 {
+        0% { width: 110px; }
+        100% { width: 188px; }
+      }
+      @keyframes fillBar3 {
+        0% { width: 130px; }
+        100% { width: 200px; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background & Cyber Grid -->
+  <rect width="960" height="320" rx="16" fill="url(#bgGrad)" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect width="960" height="320" rx="16" fill="url(#grid)"/>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="140" cy="70" r="110" fill="#8B0000" opacity="0.18" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.12;0.26;0.12" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="250" r="120" fill="#D4AF37" opacity="0.10" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.06;0.16;0.06" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated Top Laser Scanner -->
+  <rect x="0" y="0" width="960" height="2.5" fill="url(#scanLine)">
+    <animate attributeName="y" values="6;312;6" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Top Terminal Header Strip -->
+  <rect x="20" y="18" width="920" height="34" rx="8" fill="#151520" stroke="#2D2D3F" stroke-width="1"/>
+  <circle cx="40" cy="35" r="5.5" fill="#FF5F56"/>
+  <circle cx="58" cy="35" r="5.5" fill="#FFBD2E"/>
+  <circle cx="76" cy="35" r="5.5" fill="#27C93F"/>
+  <text x="100" y="39" class="mono" fill="#9A9AB0" font-size="12">aral@ai-workstation:~/telemetry$ ./run_inference_telemetry --realtime</text>
+  <rect x="572" y="28" width="7" height="14" fill="#D4AF37" class="cursor"/>
+
+  <!-- Live Status Pill (Top Right) -->
+  <rect x="738" y="23" width="190" height="24" rx="12" fill="#1C1417" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.7"/>
+  <circle cx="754" cy="35" r="4.5" fill="#2ECC71" class="pulse-dot"/>
+  <text x="767" y="39" class="mono" fill="#F5D061" font-size="11" font-weight="bold">OPEN FOR AI / DATA ROLES</text>
+
+  <!-- LEFT COLUMN: Identity & Core Value Hook -->
+  <g transform="translate(28, 74)">
+    <text x="0" y="20" class="mono" fill="#E63946" font-size="12" font-weight="bold">▸ SYSTEM IDENTITY // S.Kom. (UNSRI '26 • GPA 3.77)</text>
+    <text x="0" y="52" class="title" font-size="25">M. ATHALLAH RAFIF</text>
+    <text x="262" y="52" class="gold-text" font-size="25">ALDERA</text>
+    <text x="0" y="78" class="mono" fill="#F5D061" font-size="14" font-weight="bold">AI Engineer • Machine Learning • Data Science</text>
+    <text x="0" y="102" class="sub">Building verified generative vision models, real-time ML security</text>
+    <text x="0" y="120" class="sub">guards, and autonomous tool-calling LLM pipelines.</text>
+
+    <!-- Animated Architecture Pipeline Diagram -->
+    <g transform="translate(0, 140)" class="float-1">
+      <rect x="0" y="0" width="122" height="54" rx="8" class="node-box"/>
+      <text x="61" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">StyleGAN2-ADA</text>
+      <text x="61" y="40" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">FID: 49.62</text>
+
+      <!-- Animated Connector 1 -->
+      <line x1="122" y1="27" x2="168" y2="27" stroke="#D4AF37" stroke-width="2" class="flow-line"/>
+      <circle cx="122" cy="27" r="3.5" fill="#F5D061" filter="url(#glow)">
+        <animate attributeName="cx" values="124;166" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+
+      <rect x="168" y="0" width="126" height="54" rx="8" class="node-box"/>
+      <text x="231" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">DenseNet121</text>
+      <text x="231" y="40" text-anchor="middle" class="mono" fill="#2ECC71" font-size="11">Acc: 97.00%</text>
+
+      <!-- Animated Connector 2 -->
+      <line x1="294" y1="27" x2="340" y2="27" stroke="#E63946" stroke-width="2" class="flow-line"/>
+      <circle cx="294" cy="27" r="3.5" fill="#E63946" filter="url(#glow)">
+        <animate attributeName="cx" values="296;338" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+
+      <rect x="340" y="0" width="132" height="54" rx="8" class="node-box"/>
+      <text x="406" y="22" text-anchor="middle" class="mono" fill="#F5D061" font-size="11" font-weight="bold">FastAPI / Agent</text>
+      <text x="406" y="40" text-anchor="middle" class="mono" fill="#61DAFB" font-size="11">100% Pytest</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Live Production Telemetry Bars -->
+  <g transform="translate(535, 70)" class="float-2">
+    <rect x="0" y="0" width="398" height="224" rx="12" class="card-box"/>
+    <text x="20" y="28" class="mono" fill="#F5D061" font-size="12" font-weight="bold">⚡ VERIFIED BENCHMARK TELEMETRY</text>
+    <line x1="20" y1="38" x2="378" y2="38" stroke="#2A2A38" stroke-width="1"/>
+
+    <!-- Metric 1 -->
+    <text x="20" y="62" class="mono" fill="#E0E0E8" font-size="11.5">[01] Medical CNN Classification (DenseNet121)</text>
+    <text x="315" y="62" class="mono" fill="#2ECC71" font-size="11.5" font-weight="bold">97.00% ACC</text>
+    <rect x="20" y="70" width="220" height="8" rx="4" fill="#1E1E2C"/>
+    <rect x="20" y="70" width="205" height="8" rx="4" fill="url(#goldGrad)" class="bar-1"/>
+    <text x="250" y="78" class="mono" fill="#9A9AB0" font-size="10">100% Pos. Precision</text>
+
+    <!-- Metric 2 -->
+    <text x="20" y="108" class="mono" fill="#E0E0E8" font-size="11.5">[02] Phishing Guard ML (630,071 URLs • Kominfo)</text>
+    <text x="315" y="108" class="mono" fill="#F5D061" font-size="11.5" font-weight="bold">89.00% ACC</text>
+    <rect x="20" y="116" width="220" height="8" rx="4" fill="#1E1E2C"/>
+    <rect x="20" y="116" width="188" height="8" rx="4" fill="url(#crimsonGrad)" class="bar-2"/>
+    <text x="250" y="124" class="mono" fill="#9A9AB0" font-size="10">RandomForest + API</text>
+
+    <!-- Metric 3 -->
+    <text x="20" y="154" class="mono" fill="#E0E0E8" font-size="11.5">[03] ReAct Market Research Agent + Core Toolkit</text>
+    <text x="315" y="154" class="mono" fill="#61DAFB" font-size="11.5" font-weight="bold">PASS 100%</text>
+    <rect x="20" y="162" width="220" height="8" rx="4" fill="#1E1E2C"/>
+    <rect x="20" y="162" width="200" height="8" rx="4" fill="url(#goldGrad)" class="bar-3"/>
+    <text x="250" y="170" class="mono" fill="#9A9AB0" font-size="10">Vector DB + TDD</text>
+
+    <!-- Footer Stack Pills inside Card -->
+    <rect x="20" y="188" width="76" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
+    <text x="58" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">Python 3</text>
+
+    <rect x="104" y="188" width="74" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
+    <text x="141" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">PyTorch</text>
+
+    <rect x="186" y="188" width="90" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
+    <text x="231" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">TensorFlow</text>
+
+    <rect x="284" y="188" width="94" height="22" rx="5" fill="#1A1A28" stroke="#D4AF37" stroke-width="0.6"/>
+    <text x="331" y="203" text-anchor="middle" class="mono" fill="#F5D061" font-size="10.5">Scikit-Learn</text>
+  </g>
+</svg>

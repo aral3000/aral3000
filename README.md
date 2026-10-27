@@ -1,4 +1,10 @@
-# Hi there, I'm M. Athallah Rafif Aldera (Aral) 👋
+<div align="center">
+  <a href="https://aral3000.github.io">
+    <img src="./assets/hero-motion.svg" alt="M. Athallah Rafif Aldera - AI & Machine Learning Engineer Motion Banner" width="100%"/>
+  </a>
+</div>
+
+<br/>
 
 <p align="center">
   <a href="https://aral3000.github.io"><img src="https://img.shields.io/badge/Portfolio-Live%20Website-red?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/></a>
@@ -12,12 +18,12 @@ aral@workstation:~$ neofetch --profile
   /\_/\   (o.o)   [M. Athallah Rafif Aldera, S.Kom.]
  ( > < )  ( _ )   AI & Machine Learning Engineer
 ───────────────────────────────────────────────────────────────────
-▸ Degree       : B.S. in Computer Systems, Sriwijaya University (UNSRI)
-▸ Focus        : Computer Vision, Generative AI (GANs) & Agentic LLMs
-▸ Flagship     : StyleGAN2-ADA (FID 49.62) & DenseNet121 (Acc 95.00%)
+▸ Degree       : B.S. in Computer Systems, Sriwijaya University (GPA 3.77/4.00)
+▸ Focus        : Computer Vision, Generative AI (GANs) & Data Science
+▸ Flagship     : StyleGAN2-ADA (FID 49.62) & DenseNet121 (Acc 97.00% / 95.00% Synth)
 ▸ Defense ML   : Phishing URL Guard on 630K URLs (Acc 89.0%, KOMINFO)
 ▸ Stack        : Python 3, PyTorch, TensorFlow, Scikit-Learn, FastAPI, SQL
-▸ Availability : Open for AI Engineer Roles (Jakarta / Hybrid / Remote)
+▸ Availability : Open for AI / Data / Software Roles (Jakarta / Hybrid / Remote)
 ───────────────────────────────────────────────────────────────────
 ```
 
@@ -25,11 +31,11 @@ aral@workstation:~$ neofetch --profile
 
 ### 🚀 About Me
 
-* 🎓 **Fresh Graduate in Computer Systems (S.Kom.)** from **Universitas Sriwijaya (UNSRI)**, specializing in AI Engineering, Computer Vision, and Generative Modeling.
-* 🔬 **Medical AI & Generative Modeling**: Benchmarked **StyleGAN2-ADA**, **StyleGAN3**, and **DCGAN** on clinical datasets; achieved a peak FID score of **49.62** and demonstrated 100% synthetic substitution on **DenseNet121** with **95.00% test accuracy**, **96% F1-score**, and **100.00% positive precision & specificity** (vs 97.00% original baseline).
-* 🛡️ **Applied Machine Learning & Cybersecurity**: Developed a phishing link detection pipeline for **Dinas Kominfo** on a massive **630,071 URL dataset** using Random Forest, achieving **89.0% testing accuracy** with an interactive Streamlit UI and model serialization.
-* 🤖 **Agentic AI & Advanced RAG**: Architecting autonomous agent workflows with Tool Calling (Search, Scraper, Python REPL), Vector Databases, and containerized FastAPI backends.
-* ☁️ **Certified Cloud Contender**: **Google Cloud Certified Contender** (`#JuaraGCP` - Credly UUID: `88fa31ad-35ee-4d9d-88bf-785b93c87edb`) with hands-on serverless API Gateway deployment experience.
+* 🎓 **Fresh Graduate in Computer Systems (S.Kom., GPA 3.77/4.00)** from **Universitas Sriwijaya (UNSRI)**, specializing in AI Engineering, Computer Vision, and Data Science.
+* 🔬 **Medical AI & Generative Modeling**: Benchmarked **StyleGAN2-ADA**, **StyleGAN3**, and **DCGAN** on clinical VIA cervical datasets; achieved a peak FID score of **49.62**, elevated **DenseNet121** accuracy to **97.00%** (50% real + 50% synthetic augmentation), and demonstrated 100% synthetic substitution with **95.00% test accuracy**, **96% F1-score**, and **100.00% positive precision & specificity**.
+* 🛡️ **Applied Machine Learning & Cybersecurity**: Developed a phishing link detection pipeline for **Dinas Kominfo** on a **630,071 URL dataset** using Random Forest, achieving **89.0% testing accuracy** with an interactive Streamlit UI and FastAPI service.
+* 🤖 **Agentic AI & Core Engineering**: Building autonomous ReAct agent workflows with Tool Calling, Cosine Vector Stores, and Test-Driven Development (TDD) Python data pipelines.
+* ☁️ **Verified Credentials**: **Komdigi Digital Talent Scholarship (AI)**, **ASEAN Foundation & Google.org (AI Career Readiness)**, **Google Cloud Skill Badges** ([Credly Profile](https://www.credly.com/users/m-athallah-rafif-aldera/badges/credly)), and **6 Dicoding Indonesia Competency Certificates** (Machine Learning, Python, Data Science, SQL, AI, Data Visualization).
 
 ---
 
@@ -37,10 +43,10 @@ aral@workstation:~$ neofetch --profile
 
 | Project | Focus | Tech Stack | Highlights |
 | :--- | :--- | :--- | :--- |
-| [**cervical-cancer-stylegan2-densenet121**](https://github.com/aral3000/cervical-cancer-stylegan2-densenet121) | Medical AI & Computer Vision | `PyTorch`, `StyleGAN2-ADA`, `DenseNet121`, `CUDA` | Synthesized clinical images; peak FID of **49.62** on StyleGAN2-ADA; achieved **95.00% test accuracy** with 100% synthetic substitution on DenseNet121. |
-| [**phishing-detection-system**](https://github.com/aral3000/phishing-detection-system) | Applied ML & Cybersecurity | `Python`, `Scikit-Learn`, `Streamlit`, `FastAPI` | Public sector ML system trained on **630,071 URLs** achieving **89.0% testing accuracy**; features interactive UI with confidence scores & REST API. |
-| [**python-ai-core-toolkit**](https://github.com/aral3000/python-ai-core-toolkit) | Data Engineering & Algorithms | `Python 3`, `NumPy`, `Pandas`, `pytest` | Modular toolkit implementing high-performance data transformation pipelines, memory optimization, priority queues, and full TDD test suite. |
-| [**autonomous-market-research-agent**](https://github.com/aral3000/autonomous-market-research-agent) | Agentic AI & Production LLM | `FastAPI`, `Docker`, `Vector DB`, `Tool Calling` | Autonomous market research agent executing search & scraping tools, maintaining long-term memory in Vector DB, and generating structured executive reports. |
+| [**cervical-cancer-stylegan2-densenet121**](https://github.com/aral3000/cervical-cancer-stylegan2-densenet121) | Medical AI & Computer Vision | `PyTorch`, `StyleGAN2-ADA`, `DenseNet121`, `CUDA` | Synthesized clinical images; peak FID of **49.62** on StyleGAN2-ADA; **97.00% peak accuracy** (50:50 mix) & **95.00% accuracy** with 100% synthetic substitution (`100%` positive precision). |
+| [**phishing-detection-system**](https://github.com/aral3000/phishing-detection-system) | Applied ML & Cybersecurity | `Python`, `Scikit-Learn`, `Streamlit`, `FastAPI` | Public sector ML system trained on **630,071 URLs** achieving **89.0% testing accuracy**; features 9 lexical URL extractors, interactive UI & REST API. |
+| [**python-ai-core-toolkit**](https://github.com/aral3000/python-ai-core-toolkit) | Data Engineering & Algorithms | `Python 3`, `NumPy`, `Pandas`, `pytest` | Modular TDD toolkit implementing $O(1)$ data structures, vectorized NumPy similarity matrices, and Pandas feature engineering pipelines. |
+| [**autonomous-market-research-agent**](https://github.com/aral3000/autonomous-market-research-agent) | Agentic AI & Production LLM | `FastAPI`, `Streamlit`, `Vector DB`, `ReAct` | Autonomous market research agent executing search & scraping tools, maintaining long-term memory in a Cosine Vector Store, and generating executive reports. |
 
 ---
 
@@ -50,15 +56,14 @@ aral@workstation:~$ neofetch --profile
   <!-- Languages -->
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"/>
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++"/>
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" alt="Bash"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP"/>
+  <img src="https://img.shields.io/badge/HTML5%20%26%20CSS3-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5 & CSS3"/>
   <br/>
   <!-- AI / ML Frameworks -->
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"/>
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
   <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"/>
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face"/>
   <br/>
   <!-- Data & Visualization -->
   <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
@@ -68,10 +73,8 @@ aral@workstation:~$ neofetch --profile
   <br/>
   <!-- Cloud & DevOps -->
   <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white" alt="Google Cloud"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
 </p>
 
 ---
